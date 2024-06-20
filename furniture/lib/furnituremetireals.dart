@@ -14,55 +14,64 @@ class Furnituremetireals extends StatelessWidget {
               Radius.circular(10),
             ),
           ),
-          height: 320,
-          width: 200,
+          height: MediaQuery.of(context).size.height / 2.7,
+          width: 180,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(10),
                 child: Card(
                   elevation: 10,
                   child: Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/blue.jpg'),
+                          image: AssetImage('images/pink.jpg'),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.all(
                         Radius.circular(10),
                       ),
                     ),
-                    height: 180,
-                    width: 190,
+                    height: MediaQuery.of(context).size.height / 5,
+                    width: 150,
+                    child: const Padding(
+                      padding: EdgeInsets.only(bottom: 180, left: 140),
+                      child: Icon(Icons.favorite_outlined),
+                    ),
                   ),
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.only(
-                  right: 40,
-                ),
-                child: Text(
-                  'item Name',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(right: 70),
-                child: Text('Discription'),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: Row(
+                padding: EdgeInsets.only(left: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '250.0',
-                      style: TextStyle(fontSize: 25),
+                      "item Name",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
+                    Text("description"),
                     SizedBox(
-                      width: 50,
+                      height: 10,
                     ),
-                    Icon(Icons.add_circle),
+                    Row(
+                      children: [
+                        Text(
+                          "120.0",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Icon(
+                          Icons.add_circle,
+                          size: 30,
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
